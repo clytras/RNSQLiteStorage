@@ -28,8 +28,8 @@ export default class App extends React.Component {
   componentDidMount() {
     SQLite.openDatabase(
       {
-          name: 'test_rn_061.db', 
-          location: 'Library'
+        name: 'test_rn_061.db', 
+        location: 'Library'
       }, 
       db => {
         console.log('Connected to SQLite db');
@@ -50,9 +50,9 @@ export default class App extends React.Component {
       db.transaction(tx => {
         tx.executeSql(`
 CREATE TABLE IF NOT EXISTS 'test' (
-'key'   TEXT,
-'value' TEXT,
-PRIMARY KEY('key')
+  'key'   TEXT,
+  'value' TEXT,
+  PRIMARY KEY('key')
 );
         `);
 
@@ -96,6 +96,8 @@ PRIMARY KEY('key')
   renderData() {
     const { data } = this.state;
 
+    console.log('render data', data);
+
     return data.length > 0 && (
       <>
         {data.map(({ key, value }) => <Text key={key}>{value}</Text>)}
@@ -104,13 +106,12 @@ PRIMARY KEY('key')
   }
 
   render() {
-    console.log('render data', this.state.data);
     return (
       <>
         <StatusBar barStyle="dark-content" />
         <SafeAreaView>
           <ScrollView>
-            <Text>Data</Text><Button title="Add data" onPress={this.addData}/>
+            <Button title="Add data" onPress={this.addData}/>
             <View>
               {this.renderData()}
             </View>
