@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android-clean": "cd android && rm -rf ./build && ./gradlew clean && cd ..",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
@@ -21,7 +22,7 @@
     "eslint": "^6.8.0",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.4",
-    "react-native-sqlite-storage": "andpor/react-native-sqlite-storage#404/head",
+    "react-native-sqlite-storage": "andpor/react-native-sqlite-storage#405/head",
     "react-test-renderer": "16.9.0"
   },
   "jest": {

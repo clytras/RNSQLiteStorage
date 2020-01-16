@@ -34,6 +34,14 @@ export default class App extends React.Component {
       db => {
         console.log('Connected to SQLite db');
 
+        db.transaction(tx => {
+          tx.executeSql(`CREATE VIRTUAL TABLE email USING fts5(sender, title, body);`);
+        },
+        error => console.warn(`create virtual fts5 error`, error),
+        () => {
+          console.log('create virtual fts5 success');
+        });
+
         this.loadData(db);
         this.setState({ db });
       },
@@ -70,6 +78,8 @@ CREATE TABLE IF NOT EXISTS 'test' (
 
           this.setState({ data });
         });
+
+        
       });
     } else {
       console.warn('"loadData": No db initialized');

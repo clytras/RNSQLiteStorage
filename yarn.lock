@@ -5032,9 +5032,9 @@ react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
-react-native-sqlite-storage@andpor/react-native-sqlite-storage#404/head:
-  version "4.0.0"
-  resolved "https://codeload.github.com/andpor/react-native-sqlite-storage/tar.gz/7bdd22328090c6b7a8a67ff1a541091d666f481e"
+react-native-sqlite-storage@andpor/react-native-sqlite-storage#405/head:
+  version "4.1.0"
+  resolved "https://codeload.github.com/andpor/react-native-sqlite-storage/tar.gz/3cf77fa95818ceca1da2164bf87a38411930291e"
 
 react-native@0.61.5:
   version "0.61.5"
